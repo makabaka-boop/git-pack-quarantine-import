@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitpack-import"
+version = "0.1.0"
+description = "Git PACK v2 (SHA-1) 安全导入工具（自实现解析，不调用 git index-pack）"
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.scripts]
+gitpack-import = "gitpack_import.cli:main"
+
+[tool.setuptools]
+packages = ["gitpack_import"]
